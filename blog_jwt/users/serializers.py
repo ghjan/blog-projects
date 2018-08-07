@@ -1,8 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from tasks.models import Task
-
 
 class UserSerializer(serializers.ModelSerializer):
     tasks = serializers.PrimaryKeyRelatedField(
@@ -11,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'password', 'tasks', 'email')
+        fields = ('id', 'username', 'password', 'tasks', 'email')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
