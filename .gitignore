@@ -1,5 +1,7 @@
 
 # Created by https://www.gitignore.io/api/python,emacs,django
+### pycharm ###
+**/.idea/*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
